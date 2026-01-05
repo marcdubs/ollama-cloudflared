@@ -27,6 +27,8 @@ if [ -n "$MODELS_TO_LOAD" ]; then
         ollama pull "$model"
     done
     echo "Model preloading complete."
+else
+    echo "No models specified for preloading."
 fi
 
 wait $OLLAMA_PID
